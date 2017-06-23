@@ -251,8 +251,6 @@ void solvePuzzle(int puzzleArray[81][2])
 {
 	//declare variables
 	int tempPuzzle[81][2] = {0};
-	int firstGuess = 0;
-	int lastGuess  = 0;
 	int counter    = 0;
 	
 	//copy puzzle clues into temporary array and flag all other cells as guesses
@@ -264,59 +262,40 @@ void solvePuzzle(int puzzleArray[81][2])
 			tempPuzzle[cell][1] = 1;						//flag all other cells as guesses
 			//end if
 	}	//end for
-	
-	//determine the first open cell in the puzzle
-	while (counter < 81)
-	{
-		if (tempPuzzle[counter][1] == 1)
-		{
-			firstGuess = counter;
-			counter = 81;
-		}
-		else
-		{
-			counter += 1;
-		}	//end if
-	}	//end while
-	
-	//determine the last open cell in the puzzle
-	counter = 80;
-	while (counter > 0)
-	{
-		if (tempPuzzle[counter][1] == 1)
-		{
-			lastGuess = counter;
-			counter = 0;
-		}
-		else
-		{
-			counter -= 1;
-		}	//end if
-	}	//end while
 
 	//solve the puzzle
-	counter = firstGuess;
-	while ((counter >= firstGuess) && (counter <= lastGuess))
+	while ((counter > -1) && (counter < 81))
 	{
 		if (tempPuzzle[counter][1] != 0)		//cell is not a clue
 		{
-			if (tempPuzzle[counter][0] < 9)		//cell value is not maxed
+			if (tempPuzzle[counter][0] < 9)		//cell is not maxed
 			{
-				tempPuzzle[counter][0] += 1;	//increase the cell value by one
+				tempPuzzle[counter][0] += 1;	//increase its value
 				if (checkForDuplicate(counter, tempPuzzle[counter][0], tempPuzzle) == 0)
-					counter += 1;
+					counter += 1;				//new value is not a duplicate, so move on to next cell
 					//end if
 			}
-			else								//cell value is maxed, reset to 0 and go back to previous cell
+			else
 			{
 				tempPuzzle[counter][0] = 0;
 				counter -= 1;
+				while (tempPuzzle[counter][1] == 0)
+					counter -= 1;
+					//end while
 			}	//end if
 		}
 		else									//cell is a clue, go to next cell
 		{
 			counter += 1;
 		}	//end if
+		
+		system("clear");
+		displayPuzzle(tempPuzzle);
+		cout << "Counter: " << counter << endl;
+		
+		if ((countAnswers(tempPuzzle) == 81) && (countDuplicates(tempPuzzle) == 0))
+			counter = 100;
+		
 	}	//end while
 	
 	//flag all cells as clues
@@ -423,7 +402,7 @@ int chooseCell()
 		cellRow    = -1;
 		cellColumn = -1;
 		
-		cout << "  Enter row letter (A - I) plus column number (1 - 9) or X to return to main menu: ";
+		cout << "  Enter row letter (A - I) plus column number (1 - 9) or X to return to main menu (progress will not be lost): ";
 		getline(cin, cellCoordinates);
 		
 		if ((cellCoordinates == "X") || (cellCoordinates == "x"))
