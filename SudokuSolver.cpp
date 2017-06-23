@@ -308,7 +308,11 @@ void solvePuzzle(int puzzleArray[81][2])
 		//end for
 	
 	displayPuzzle(tempPuzzle);
-	cout << endl << endl << "Puzzle Solved!" << endl << endl;	
+	
+	if ((countAnswers(tempPuzzle) == 81) && (countDuplicates(tempPuzzle) == 0))
+		cout << endl << "Puzzle Solved!" << endl << endl;
+	else
+		cout << endl << "Could not solve..." << endl << endl;
 }	//end solvePuzzle function
 
 //display the puzzle
