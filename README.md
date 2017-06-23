@@ -1,5 +1,5 @@
 # SWATC-Cpp
-C++ Projects
+C++ Final Project
 
 Sudoku Solver version 1.0
 created by Robin G. Blaine on 6/23/2017 using C++
@@ -8,7 +8,7 @@ created by Robin G. Blaine on 6/23/2017 using C++
 Sudoku is a Japanese puzzle consisting of 81 squares arranged in a nine-by-nine grid.  This grid is further subdivided into 9 three-by-three regions.  The object of the game is to place the numbers 1 through 9 in each of the squares such that no number is duplicated in any row, column, or region.  Puzzles start with a number of the squares (called clues) already filled. This program allows the user to enter clues and guesses into a puzzle and lets the user know when they have solved the puzzle.  It also allows the user to save their progress on a puzzle, including any clues and guesses.  Finally, the program can solve a puzzle for the user.
 
 
-Code Example (puzzle solver algorithm):  This is the section of the program that searches through the puzzle and finds the solution.
+# Code Example (puzzle solver algorithm):  This is the section of the program that searches through the puzzle and finds the solution.
 
 	//solve the puzzle
 	counter = firstGuess;
@@ -36,12 +36,12 @@ Code Example (puzzle solver algorithm):  This is the section of the program that
 	}	//end while
 
 
-Motivation:
+# Motivation:
 
 This is the final project for my C++ introductory programming class.  Its purpose is to showcase my understanding of the basic concepts introduced in the course.  Future updates to the program will add graphic elements including a graphical user interface.
 
 
-API:
+# API:
 
 The main menu of the program allows you to select from the following options:
 
@@ -78,7 +78,7 @@ The main menu of the program allows you to select from the following options:
 	This option exits the program.
 
 ~~~
-Puzzle Legend:
+# Puzzle Legend:
 	A blank square with a ? after it is empty.
 	A square with a number not followed by any cell is a clue. (A1)
 	A square with a number followed by a ? is a guess. (D2)
@@ -103,9 +103,11 @@ Puzzle Legend:
  Row letter
  ~~~
 
-Tests:  Tests may be run by entering a number of clues and guesses, saving the puzzle, and having the program search for a solution.  This may take a while (upwards of 900,000 cycles) for puzzles with fewer numbers of clues.  For a quicker test, more clues should be added.
+# Tests
+	Tests may be run by entering a number of clues and guesses, saving the puzzle, and having the program search for a solution.  This may take a while (upwards of 900,000 cycles) for puzzles with fewer numbers of clues.  For a quicker test, more clues should be added.
 
 
+# Contributers
 Contributers can find out more about the algorithm at the following sites:
 	https://en.wikipedia.org/wiki/Sudoku_solving_algorithms
 	https://stackoverflow.com/questions/16675248/sudoku-solving-algorithm-c
