@@ -102,7 +102,6 @@ Puzzle Legend:
  ^
  Row letter
 
-
 Tests:  Tests may be run by entering a number of clues and guesses, saving the puzzle, and having the program search for a solution.  This may take a while (upwards of 900,000 cycles) for puzzles with fewer numbers of clues.  For a quicker test, more clues should be added.
 
 
