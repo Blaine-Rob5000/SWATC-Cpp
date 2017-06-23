@@ -67,7 +67,7 @@ The main menu of the program allows you to select from the following options:
 	If the "SudokuPuzzle.txt" file does not contain the appropriate amount of data, the puzzle will not be loaded.
 
 5) Have the Computer Attempt to Solve the Puzzle
-	The program will solve the puzzle and display the answer.  For puzzles with a fewer number of clues, this may take some time. Only clues are taken into account when solving the puzzle; any guesses entered by the user are not considered.
+	The program will solve the puzzle and display the answer.  For puzzles with a fewer number of clues, this may take some time. Only clues are taken into account when solving the puzzle; any guesses entered by the user are not considered. However, if the user is certain of the values for any numbers, they may be entered as clues and will be considered.
 
 	The algorithm used to solve the puzzle is a "brute force" method called backtracking. It places a value of 1 in the first open square and checks to see if that value is legal.  If it is legal, it moves on to the next open square.  If it is not legal, it increments to the next value and checks it. If no value is legal, it moves back to the previous open square and increments its value by 1.
 
