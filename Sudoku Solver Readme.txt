@@ -45,7 +45,7 @@ Puzzle Legend:
 	A square with a number followed by a ? is a guess. (A4)
 	A square with a number followed by a ! is a duplicate number. (D2)
 
-   | 1   2   3   | 4   5   6   | 7   8   9   |
+   | 1   2   3   | 4   5   6   | 7   8   9   |  < Column number
 ----------------------------------------------
  A | 5    ?   ?  | 5!   ?   ?  |  ?   ?   ?  |
  B |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
@@ -60,3 +60,5 @@ Puzzle Legend:
  I |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
 ----------------------------------------------
 
+ ^
+ Row letter
