@@ -77,7 +77,7 @@ The main menu of the program allows you to select from the following options:
 0) Quit Program
 	This option exits the program.
 
-'''
+~~~
 Puzzle Legend:
 	A blank square with a ? after it is empty.
 	A square with a number not followed by any cell is a clue. (A1)
@@ -101,7 +101,7 @@ Puzzle Legend:
 
  ^
  Row letter
- '''
+ ~~~
 
 Tests:  Tests may be run by entering a number of clues and guesses, saving the puzzle, and having the program search for a solution.  This may take a while (upwards of 900,000 cycles) for puzzles with fewer numbers of clues.  For a quicker test, more clues should be added.
 
