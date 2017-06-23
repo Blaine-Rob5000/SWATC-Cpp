@@ -78,8 +78,8 @@ The main menu of the program allows you to select from the following options:
 Puzzle Legend:
 	A blank square with a ? after it is empty.
 	A square with a number not followed by any cell is a clue. (A1)
-	A square with a number followed by a ? is a guess. (A4)
-	A square with a number followed by a ! is a duplicate number. (D2)
+	A square with a number followed by a ? is a guess. (D2)
+	A square with a number followed by a ! is a duplicate number. (A4)
 
    | 1   2   3   | 4   5   6   | 7   8   9   |  < Column number
 ----------------------------------------------
