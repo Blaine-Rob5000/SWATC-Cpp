@@ -288,11 +288,15 @@ void solvePuzzle(int puzzleArray[81][2])
 		{
 			counter += 1;
 		}	//end if
-		
-		system("clear");
-		displayPuzzle(tempPuzzle);
-		cout << "Counter: " << counter << endl;
-		
+
+
+//*** debug ***		
+	system("clear");
+	displayPuzzle(tempPuzzle);
+	cout << "Counter: " << counter << endl;
+//*** debug ***
+
+
 		if ((countAnswers(tempPuzzle) == 81) && (countDuplicates(tempPuzzle) == 0))
 			counter = 100;
 		
@@ -667,5 +671,4 @@ int countDuplicates(int puzzleArray[81][2])
 	
 	return numDuplicates;
 }	//end countDuplicates function
-
 
