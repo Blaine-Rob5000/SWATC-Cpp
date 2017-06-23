@@ -1,0 +1,62 @@
+Sudoku Solver version 1.0
+created by Robin G. Blaine
+6/23/2017
+
+Sudoku is a Japanese puzzle consisting of 81 squares arranged in a nine-by-nine grid.  This grid is further subdivided into 9 three-by-three regions.  The object of the game is to place the numbers 1 through 9 in each of the squares such that no number is duplicated in any row, column, or region.  Puzzles start with a number of the squares (called clues) already filled.
+
+The main menu of the program allows you to select from the following options:
+
+1) Enter Puzzle Clues
+	The user can enter the clues (squares with predetermined, fixed values) by entering the coordinates for the square by the row letter (A, B, C, D, E, F, G, H, or I) and the column number (1, 2, 3, 4, 5, 6, 7, 8, or 9).  For example, the first square of the puzzle is A1 and the last square is I9.  Letters may be entered in upper or lower case.
+
+	After selecting a square, the user either enters a clue value for that square (ranging from 1 to 9) or 0 to clear the square.  The program will not allow the user to enter duplicate clues.  If a clue would 
+
+	The program displays the number of clues entered for the puzzle.  Note that no puzzle with fewer than 17 clues can have a unique solution.
+
+	Once the user has finished entering clues, she may return to the main menu by entering the letter X (upper or lower case) for the square coordinates.
+
+	The user may return later to add additional clues as desired.
+
+2) Attempt to Solve Puzzle
+	The user enters guesses into squares in the puzzle that do not contain guesses.  The program flags these squares as either a guess (?) or a duplicate (!).  If the user fills all of the free squares with non-duplicate numbers, the puzzle is solved.
+
+3) Save Puzzle
+	The program saves the puzzle (including all clues and guesses entered by the user) so that the user may continue working on it at a later point.
+
+	The puzzle is saved in the text file, "SudokuPuzzle.txt".
+
+4) Load Puzzle
+	The program loads a previously saved puzzle so that the user can continue working on it.
+
+	If the "SudokuPuzzle.txt" file does not contain the appropriate amount of data, the puzzle will not be loaded.
+
+5) Have the Computer Attempt to Solve the Puzzle
+	The program will solve the puzzle and display the answer.  For puzzles with a fewer number of clues, this may take some time.
+
+	The algorithm used to solve the puzzle is a "brute force" method called backtracking. It places a value of 1 in the first open square and checks to see if that value is legal.  If it is legal, it moves on to the next open square.  If it is not legal, it increments to the next value and checks it. If no value is legal, it moves back to the previous open square and increments its value by 1.
+
+0) Quit Program
+	This option exits the program.
+
+
+Puzzle Legend:
+	A blank square with a ? after it is empty.
+	A square with a number not followed by any cell is a clue. (A1)
+	A square with a number followed by a ? is a guess. (A4)
+	A square with a number followed by a ! is a duplicate number. (D2)
+
+   | 1   2   3   | 4   5   6   | 7   8   9   |
+----------------------------------------------
+ A | 5    ?   ?  | 5!   ?   ?  |  ?   ?   ?  |
+ B |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+ C |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+----------------------------------------------
+ D |  ?  4?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+ E |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+ F |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+----------------------------------------------
+ G |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+ H |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+ I |  ?   ?   ?  |  ?   ?   ?  |  ?   ?   ?  |
+----------------------------------------------
+
