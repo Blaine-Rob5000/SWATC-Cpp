@@ -277,7 +277,6 @@ void solvePuzzle(int puzzleArray[81][2])
 		{
 			counter += 1;
 		}	//end if
-		counter += 1;
 	}	//end while
 	
 	//determine the last open cell in the puzzle
@@ -293,7 +292,6 @@ void solvePuzzle(int puzzleArray[81][2])
 		{
 			counter -= 1;
 		}	//end if
-		counter -= 1;
 	}	//end while
 
 	//solve the puzzle
