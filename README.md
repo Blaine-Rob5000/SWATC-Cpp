@@ -23,7 +23,7 @@ Sudoku is a Japanese puzzle consisting of 81 squares arranged in a nine-by-nine 
 					counter += 1;
 					//end if
 			}
-			else					//cell value is maxed, reset to 0 and go back to previous cell
+			else					//cell value maxed, reset to 0 & go back 1 cell
 			{
 				tempPuzzle[counter][0] = 0;
 				counter -= 1;
